@@ -46,5 +46,5 @@ function solution(n, lost, reserve) {
     }
     return array;
   }
-  return answer;
 }
+//link https://programmers.co.kr/learn/courses/30/lessons/42862
