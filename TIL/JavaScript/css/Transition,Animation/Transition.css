@@ -1,0 +1,15 @@
+.sqare {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition-property: width, background-color;
+  transition-duration: 1.2s, 1s;
+  transition-timing-function: ease;
+  transition-delay: 1s;
+  transition: (shorthand);
+}
+
+.sqare:hover {
+  width: 300px;
+  background-color: blue;
+}
