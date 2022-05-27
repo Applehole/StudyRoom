@@ -16,12 +16,32 @@ function solution(people, limit) {
     return people.length - twoStuff;
   }
 
+
+//   function solution(people, limit) { // 효율성 테스트 실패
+//     let sortedPeople = people.sort((a, b) => b - a)
+//     let result = 0;
+    
+//       while (sortedPeople.length > 0) {
+//         if (sortedPeople[0] + sortedPeople[sortedPeople.length - 1] > limit) {
+//             sortedPeople.shift();
+//             result++;
+//         } else {
+//             sortedPeople.shift();
+//             sortedPeople.pop();
+//             result++;
+//         }
+//       }
+    
+//       return result;
+//     }
+
 // function solution(people, limit) { // 효율성테스트 실패
 
 //     let sortedPeople = people.sort((a, b) => b - a)
 //     let result = 0
 
 //     while (sortedPeople.length > 0) {
+//          let tempResult =result
 //         const head = sortedPeople.shift()
 //         for (let i = 0; i < sortedPeople.length; i++) {
 //             if (head + sortedPeople[i] <= limit) {
@@ -30,7 +50,9 @@ function solution(people, limit) {
 //                 break
 //             }
 //         }
-//         result++
+//          if(tempResult===result){
+//              result++
+//           }
 //     }
 //     return result
 // }
