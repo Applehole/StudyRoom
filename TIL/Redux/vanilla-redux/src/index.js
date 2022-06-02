@@ -4,28 +4,27 @@ const add =document.querySelector(".add")
 const number =document.querySelector(".number")
 const minus =document.querySelector(".minus")
 
-let counter = 0;
-
-number.innerText =counter
-
-function TextUpdate (){
-    number.innerText =counter
+const countModifier = (count = 0 , action) =>{
+    console.log("action.type",action.type)
+    if(action.type==="plus"){
+        return count+1
+    }
+    if(action.type==="minus"){
+        return count-1
+    }
+    return count
 }
 
-function handleAdd(){
-    console.log("add")
-    counter++
-    console.log(counter)
-    TextUpdate()
-}
 
-function handleMinus(){
-    console.log("minus")
-    counter--
-    console.log(counter)
-    TextUpdate()
-}
+const countStore = createStore(countModifier)
 
-add.addEventListener("click", handleAdd)
-minus.addEventListener("click",handleMinus)
+add.addEventListener("click",()=>{countStore.dispatch({type: "plus"})})
+
+minus.addEventListener("click",()=>{countStore.dispatch({type: "minus"})})
+
+countStore.subscribe(()=>{number.innerText = countStore.getState()})
+
+number.innerText = countStore.getState()
+
+console.log(countStore)
 
