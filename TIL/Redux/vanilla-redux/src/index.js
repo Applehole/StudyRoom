@@ -4,23 +4,27 @@ const add =document.querySelector(".add")
 const number =document.querySelector(".number")
 const minus =document.querySelector(".minus")
 
+
+const plus = "plus"
+const back = "back"
+
 const countModifier = (count = 0 , action) =>{
-    console.log("action.type",action.type)
-    if(action.type==="plus"){
-        return count+1
+    switch(action.type){
+        case plus :
+            return count +1;
+        case back :
+            return count -1;
+        default :
+            return count;
     }
-    if(action.type==="minus"){
-        return count-1
-    }
-    return count
 }
 
 
 const countStore = createStore(countModifier)
 
-add.addEventListener("click",()=>{countStore.dispatch({type: "plus"})})
+add.addEventListener("click",()=>{countStore.dispatch({type: plus})})
 
-minus.addEventListener("click",()=>{countStore.dispatch({type: "minus"})})
+minus.addEventListener("click",()=>{countStore.dispatch({type: back})})
 
 countStore.subscribe(()=>{number.innerText = countStore.getState()})
 
