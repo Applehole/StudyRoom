@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "type": "module",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Applehole/StudyRoom/issues"
   },
-  "homepage": "https://github.com/Applehole/StudyRoom#readme"
+  "homepage": "https://github.com/Applehole/StudyRoom#readme",
+  "devDependencies": {
+    "ts-node": "^10.8.1"
+  }
 }
