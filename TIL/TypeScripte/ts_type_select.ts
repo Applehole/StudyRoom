@@ -1,5 +1,5 @@
 let a = "addd"
-let A :string = "adddd"
+let b :string = "adddd"
 
 let c=[1,2,3]
 c.push(4)
@@ -9,4 +9,3 @@ c.push(4)
 // 코드는 줄일수록 좋으니까? 다 적어주지 말고 오류가 생길 가능성이 있는 친구들만 적어주기
 
 
-console.log(a,A)
