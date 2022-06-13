@@ -28,7 +28,7 @@ function Home (){
             <input type="text" value={text} onChange={onChange}></input>
             <button>ADD</button>
         </form>
-        {Array.map((el)=><ul>{el.text}</ul>)}
+        {Array.map((el)=><ul key={el.id}>{el.text}</ul>)}
         </>
     )
 }
