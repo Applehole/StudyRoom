@@ -1,9 +1,13 @@
 import React, {useState} from "react"
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addTodo } from "../store";
 
-function Home ({toDos ,dispatch}){
+function Home (){
     const [text,setText] =useState("")
+    const Array =useSelector((state)=>state)
+    const dispatch = useDispatch();
+
+    console.log(Array)
 
     function onChange (e){
         console.log(e.target.value)
@@ -13,7 +17,7 @@ function Home ({toDos ,dispatch}){
     function onSubmit(e){
         e.preventDefault();
         console.log(text)
-        dispatch(addTodo(text))
+        dispatch({type: 'ADD', text})
         setText("")
     }
 
@@ -24,17 +28,9 @@ function Home ({toDos ,dispatch}){
             <input type="text" value={text} onChange={onChange}></input>
             <button>ADD</button>
         </form>
-        <ul>{toDos}</ul>
+        {Array.map((el)=><ul>{el.text}</ul>)}
         </>
     )
 }
 
-function mapStateToProps(state){
-    return {toDos : state}
-}
-
-function mapDispatchToProps(dispatch){
-    return {dispatch}
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default Home

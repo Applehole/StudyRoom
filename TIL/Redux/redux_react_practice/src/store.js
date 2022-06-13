@@ -15,7 +15,7 @@ export const minusTodo = (id) =>{
     }
 }
 
-const reducer = (state=["first"],action) =>{
+const reducer = (state=[{text:"hi", id: Date.now()}],action) =>{
     switch(action.type){
         case ADD : 
             return [...state,{text:action.text, id: Date.now()}];
