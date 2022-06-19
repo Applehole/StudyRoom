@@ -4,7 +4,7 @@ import { addTodo } from "../store";
 
 function Home (){
     const [text,setText] =useState("")
-    const Array =useSelector((state)=>state)
+    const Array = useSelector((state)=>state)
     const dispatch = useDispatch();
 
     console.log(Array)
