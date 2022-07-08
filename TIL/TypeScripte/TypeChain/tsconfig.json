@@ -3,8 +3,8 @@
     "compilerOptions": {
         "outDir": "bulid",
         "target": "ES3", // 컴파일될 자바스크립트의 버젼
-        "lib": ["DOM", "ES6"], // 자동으로 완성되는 것들을 추가해줌
+        "lib": ["ES6"], // 자동으로 완성되는 것들을 추가해줌
         "strict" : true,
-        "allowJs": true
+        "allowJs": true // you have to change here!
     }
 }
