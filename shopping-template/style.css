@@ -10,4 +10,101 @@
 
 * {
   box-sizing: border-box;
+  background-color: #3f454d;
+}
+
+.header {
+  text-align: center;
+}
+
+.pickUp{
+  text-align: center;
+  width: 70%;
+  margin: 20px auto;
+}
+
+.eachItem{
+  display: grid;
+  text-align: center;
+  grid-template-rows: 6fr;
+}
+.logo{
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+
+.blue_t{
+  grid-column: 1/2;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.blue_p{
+  grid-column: 2/3;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.blue_s{
+  grid-column:3/4;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 300ms ease;
+}
+.logo:hover,
+.blue_t:hover,
+.blue_p:hover,
+.blue_s:hover{
+  transform: scale(1.1);
+}
+.pic{
+  height: 50px;
+  width: 50px;
+}
+.blueButton{
+  grid-column:4/5;
+  margin: 0px 5px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #3b88c3;
+}
+.YellowButton{
+  grid-column:5/6;
+  margin: 0px 5px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #fbbe28;
+}
+.RedButton{
+  grid-column:6/7;
+  margin: 0px 5px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #fd7f84;
+}
+
+.storageContainer{
+  text-align: center;
+  width: 60%;
+  margin: auto;
+}
+
+.clothesContainer{
+  background-color: #ffffff;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.clothesPicture{
+  background-color: #ffffff;
+  height: 50px;
+  width: 50px;
+}
+.clothesDetail{
+  background-color: #ffffff;
 }
