@@ -1,8 +1,12 @@
+import NaviBar from "../components/NaviBar"
 
 const Home= () => {
   return (
     <div>
-      홈화면
+      <NaviBar />
+      <div>
+        Home
+      </div>
     </div>
   )
 }

@@ -1,8 +1,10 @@
+import NaviBar from "../components/NaviBar"
 
 const About = () => {
     return (
       <div>
-        어바웃
+        <NaviBar />
+        <div>어바웃</div>
       </div>
     )
   }
