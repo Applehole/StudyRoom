@@ -1,13 +1,12 @@
-import NaviBar from "../components/NaviBar"
+import Seo from "../components/Seo"
 
 const About = () => {
-    return (
-      <div>
-        <NaviBar />
-        <div>어바웃</div>
-      </div>
-    )
-  }
-  
-  export default About
-  
+  return (
+    <div>
+      <Seo title="About" />
+      <div>어바웃</div>
+    </div>
+  )
+}
+
+export default About

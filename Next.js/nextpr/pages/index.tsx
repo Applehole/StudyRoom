@@ -1,12 +1,10 @@
-import NaviBar from "../components/NaviBar"
+import Seo from "../components/Seo"
 
 const Home= () => {
   return (
     <div>
-      <NaviBar />
-      <div>
-        Home
-      </div>
+      <Seo title="Home" />
+      <div>Home</div>
     </div>
   )
 }
