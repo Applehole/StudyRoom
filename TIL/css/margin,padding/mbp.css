@@ -1,0 +1,18 @@
+.Margin{
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.Border{
+    border: 20px;
+    border: 1px solid black;
+}
+
+.Padding{
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.space{
+    height: 10px;
+}
