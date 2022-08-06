@@ -1,26 +1,26 @@
-function solution(p) {
-    if(p.length === 0) return p
-    let bracketCount = 0
-    let isURight = true
-    for(let i=0; i<p.length; i++){
-        bracketCount = p[i] === '(' ? bracketCount + 1 : bracketCount - 1
-        if(bracketCount < 0) isURight = false
-        if(bracketCount === 0){
-            const [u, v] = [p.slice(0,i+1), p.slice(i+1)]
-            if(isURight){
-                return u + solution(v)
-            }else{
-                let emptyString = '(' + solution(v) + ')'
-                const slicedReversedString = u
-                    .slice(1,u.length-1)
-                    .split('')
-                    .map(bracket=> bracket === '(' ? ')' : '(')
-                    .join('')
-                return emptyString + slicedReversedString
-            }
-        }
-    }
-}
+// function solution(p) {
+//     if(p.length === 0) return p
+//     let bracketCount = 0
+//     let isURight = true
+//     for(let i=0; i<p.length; i++){
+//         bracketCount = p[i] === '(' ? bracketCount + 1 : bracketCount - 1
+//         if(bracketCount < 0) isURight = false
+//         if(bracketCount === 0){
+//             const [u, v] = [p.slice(0,i+1), p.slice(i+1)]
+//             if(isURight){
+//                 return u + solution(v)
+//             }else{
+//                 let emptyString = '(' + solution(v) + ')'
+//                 const slicedReversedString = u
+//                     .slice(1,u.length-1)
+//                     .split('')
+//                     .map(bracket=> bracket === '(' ? ')' : '(')
+//                     .join('')
+//                 return emptyString + slicedReversedString
+//             }
+//         }
+//     }
+// }
 
 // function solution(p) {
 //     if (p.length === 0) {
@@ -77,5 +77,28 @@ function solution(p) {
 //         return tempStorage.length ? false : true
 //     }
 // }
+function solution(p) {
+    if(p.length === 0) return p
+    let bracketCount = 0
+    let isURight = true
+    for(let i=0; i<p.length; i++){
+        bracketCount = p[i] === '(' ? bracketCount + 1 : bracketCount - 1
+        if(bracketCount < 0) isURight = false
+        if(bracketCount === 0){
+            const [u, v] = [p.slice(0,i+1), p.slice(i+1)]
+            if(isURight){
+                return u + solution(v)
+            }else{
+                let emptyString = '(' + solution(v) + ')'
+                const slicedReversedString = u
+                    .slice(1,u.length-1)
+                    .split('')
+                    .map(bracket=> bracket === '(' ? ')' : '(')
+                    .join('')
+                return emptyString + slicedReversedString
+            }
+        }
+    }
+}
 
-solution("()))((()")
+console.log(solution("()))((()"))
