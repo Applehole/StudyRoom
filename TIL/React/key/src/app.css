@@ -1,0 +1,16 @@
+.appDiv{
+    display: flex;
+    margin: 30px;
+}
+
+.withoutError{
+    margin: 20px;
+}
+
+.indexError{
+    margin: 20px;
+}
+
+.overlapError{
+    margin: 20px;
+}
