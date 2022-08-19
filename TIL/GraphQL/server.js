@@ -14,7 +14,7 @@ type tweet {
 }
 type Query {
     allTweet:[tweet]
-    Tweet: tweet
+    Tweet(id: ID): tweet
 }
 `
 
