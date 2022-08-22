@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.box {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    background: orange;
+    height: 300px;
+    width: 300px;
+    transition: clip-path 0.5s;
+  }
+  
+  .box:hover {
+    clip-path: polygon(100% 100%, 50% 38%, 82% 50%, 18% 50%, 30% 38%);
+  }
