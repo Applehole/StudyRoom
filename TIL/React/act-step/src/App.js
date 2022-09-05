@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <div>practice</div>
+      {console.log("여기가 먼저라고?")}
       {act.map((el)=>{
         console.log("here is app map",el)
       })}
