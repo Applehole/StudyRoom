@@ -2,6 +2,7 @@ import UseEffectNormal from "./useEffect";
 import UseEffectState from "./UseEffectState";
 import UseEffectSetTimeOut from "./UserEffectSettimeout";
 import INFUseEffect from "./InfinityLoopUseEffect";
+import Example from "./example";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       {/* <UseEffectNormal /> */}
       {/* <UseEffectState /> */}
       {/* <UseEffectSetTimeOut /> */}
-      <INFUseEffect />
+      {/* <INFUseEffect /> */}
+      <Example />
     </div>
   );
 }
