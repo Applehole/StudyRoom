@@ -10,7 +10,7 @@ function UseEffectNormal() {
   });
 
   useEffect(() => {
-    console.log("3 두번째");
+    console.log("3 세번째");
   });
 
   //해당 컴포넌트로 알 수 있는 사실
